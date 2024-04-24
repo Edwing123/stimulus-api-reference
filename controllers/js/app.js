@@ -38,6 +38,22 @@ class AfterLoaded extends Controller {
 	}
 }
 
+class EventSource extends Controller {
+	sayHi() {
+		console.log("Dispatching event.");
+		this.dispatch("sayHi");
+	}
+}
+
+class EventTarget extends Controller {
+	static targets = ["output"];
+
+	sayHi(event) {
+		console.log(event);
+		this.outputTarget.innerText = "Hi.";
+	}
+}
+
 const app = Application.start();
 app.debug = true;
 
@@ -45,3 +61,5 @@ app.register("main", Main);
 app.register("scoping", Scoping);
 app.register("loading", LoadingBasedOnCondition);
 app.register("after-loading", AfterLoaded);
+app.register("event-source", EventSource);
+app.register("event-target", EventTarget);

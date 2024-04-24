@@ -40,9 +40,45 @@
 			<div data-controller="loading"></div>
 		</main> -->
 
-		<main>
+		<!-- <main>
 			<div data-controller="after-loading"></div>
-		</main>
+		</main> -->
+
+		<!-- <main>
+			<div
+				data-controller="event-source event-target"
+				data-action="event-source:sayHi->event-target#sayHi"
+			>
+				<button data-action="event-source#sayHi">Say hi</button>
+				<p data-event-target-target="output"></p>
+			</div>
+		</main> -->
+
+		<!-- <main
+			data-controller="event-target"
+			data-action="event-source:sayHi->event-target#sayHi"
+		>
+			<div data-controller="event-source">
+				<button data-action="event-source#sayHi">Say hi</button>
+			</div>
+
+			<div>
+				<p data-event-target-target="output"></p>
+			</div>
+		</main> -->
+
+		<!-- <main>
+			<div data-controller="event-source">
+				<button data-action="event-source#sayHi">Say hi</button>
+			</div>
+
+			<div
+				data-controller="event-target"
+				data-action="event-source:sayHi@window->event-target#sayHi"
+			>
+				<p data-event-target-target="output"></p>
+			</div>
+		</main> -->
 
 		<script defer type="module" src="./js/app.js"></script>
 	</body>
