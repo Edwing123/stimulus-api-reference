@@ -44,4 +44,4 @@ app.debug = true;
 app.register("main", Main);
 app.register("scoping", Scoping);
 app.register("loading", LoadingBasedOnCondition);
-app.register("afeter-loading", AfterLoaded);
+app.register("after-loading", AfterLoaded);
